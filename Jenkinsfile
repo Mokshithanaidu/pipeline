@@ -5,7 +5,7 @@ pipeline {
         stage('Job 1: Clone GitHub Repository') {
             steps {
                 echo 'Cloning the GitHub repository...'
-                git url: 'https://github.com/Mokshithanaidu/pipeline.git'
+                git branch: 'main', url: 'https://github.com/Mokshithanaidu/pipeline.git'
             }
         }
 
