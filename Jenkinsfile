@@ -5,7 +5,7 @@ pipeline {
         stage('Job 1: Clone GitHub Repository') {
             steps {
                 echo 'Cloning the GitHub repository...'
-                git url: 'https://github.com/Mokshithanaidu/example.git'
+                git url: 'https://github.com/Mokshithanaidu/pipeline.git'
             }
         }
 
@@ -14,7 +14,6 @@ pipeline {
                 echo 'Navigating to week-4 and running the Java program...'
                 script {
                     sh '''
-                    cd week-4
                     javac HelloJava.java
                     java HelloJava
                     '''
@@ -27,7 +26,6 @@ pipeline {
                 echo 'Navigating to week-4 and running the Python script...'
                 script {
                     sh '''
-                    cd week-4
                     python3 hellopy.py
                     '''
                 }
